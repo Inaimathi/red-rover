@@ -39,8 +39,7 @@
     :S :W
     :W :N))
 
-(defn left [facing]
-  (right (right (right facing))))
+(def left (comp right right right))
 
 (defn turn [rover direction]
   "Rover -> Direction -> Rover"
